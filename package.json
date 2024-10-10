@@ -1,0 +1,17 @@
+{
+  "name": "atividade02_bets",
+  "version": "1.0.0",
+  "description": "Projeto para resolução da atividade de sistema de cadastro de suspeitos envolvidos em lavagem de dinheiro no jogo de aposta proposta pelo Felipe Dev",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SENAI",
+    "back-end",
+    "Javascript",
+    "NodeJS"
+  ],
+  "author": "Maria Eduarda",
+  "license": "MIT"
+}

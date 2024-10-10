@@ -43,5 +43,21 @@ suspeitosRoutes.get("/", (req, res) => {
     return res.status(200).json(suspeitos);
   });
 
-
+// Rota para buscar um suspeito pelo id
+suspeitosRoutes.get("/:id", (req, res) => {
+    const { id } = req.params;
+  
+    // Busca um suspeito pelo id no array de suspeitos
+    const suspeito = suspeitos.find((procurado) => procurado.id == id);
+  
+    // Verifica se o suspeito foi encontrado
+    if (!suspeito) {
+      return res
+        .status(404)
+        .json({ message: `o suspeito com id ${id} não foi encontrado!` });
+    }
+  
+    return res.status(200).json(suspeito);
+  });
+  
 export default suspeitosRoutes;

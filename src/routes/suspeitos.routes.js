@@ -1,15 +1,15 @@
 import { Router } from "express";
 
-const supeitosRoutes = Router();
+const suspeitosRoutes = Router();
 
 // Array com suspeitos
-let candidatos = [
+let suspeitos = [
   {
     id: Math.floor(Math.random() * 1000000),
     nome: "Marcello Carboni",
     profissao: "instrutor",
     envolvimento: "sim", // envolvimento em apostas 
-    nivel: "médio", // nível de suspeita 
+    nivel: "médio" // nível de suspeita 
   },
 
   {
@@ -17,7 +17,7 @@ let candidatos = [
     nome: "Felipe Santos",
     profissao: "docente",
     envolvimento: "sim", // envolvimento em apostas 
-    nivel: "alto", // nível de suspeita 
+    nivel: "alto" // nível de suspeita 
   },
 
   {
@@ -25,7 +25,7 @@ let candidatos = [
     nome: "Anna fiochi",
     profissao: "Advogada",
     envolvimento: "não", // envolvimento em apostas 
-    nivel: "baixo", // nível de suspeita 
+    nivel: "baixo" // nível de suspeita 
   },
 
   {
@@ -33,6 +33,15 @@ let candidatos = [
     nome: "Sophia Balico",
     profissao: "Policial",
     envolvimento: "Sim", // envolvimento em apostas 
-    nivel: "Médio", // nível de suspeita 
+    nivel: "Médio" // nível de suspeita 
   },
 ];
+
+
+// Rota para listar todos os suspeitos
+suspeitosRoutes.get("/", (req, res) => {
+    return res.status(200).json(suspeitos);
+  });
+
+
+export default suspeitosRoutes;
